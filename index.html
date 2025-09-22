@@ -48,14 +48,15 @@
 <body>
     <h2 align="center">V2A-DPO: Omni-Preference Optimization For Video-to-Audio Generation</h2>
     <p style="line-height:100%" align="center"><b>Authors:</b> Nolan Chan, Timmy Gang, Yongqian Wang, Yuzhe Liang, Dingdong Wang</p>
-    <p style="line-height:100%" align="center"> <a href="https://github.com/SEUJames23/mmaudio-dpo" target="_blank">
+    <p style="line-height:100%" align="center"> <a href="https://github.com/nolanchan23/mmaudio-dpo" target="_blank">
                 GitHub Project Link </a></p>
     <p style="line-height:100%" align="justify"> <b>Abstract: </b>This paper introduces V2A-DPO, a novel Direct Preference Optimization (DPO) framework tailored for flow-based video-to-audio generation (V2A) models, incorporating key adaptations to effectively align generated audio with human preferences. Our approach incorporates three core innovations: (1) AudioScore—a comprehensive human preference-aligned scoring system for assessing semantic consistency, temporal alignment, and perceptual quality of synthesized audio; (2) an automated AudioScore-driven pipeline for generating large-scale preference pair data for DPO optimization; (3) a curriculum learning-empowered DPO optimization strategy specifically tailored for flow-based generative models. Experiments on benchmark VGGSound dataset demonstrate that human-preference aligned Frieren and MMAudio using V2A-DPO outperform their counterparts optimized using Denoising Diffusion Policy Optimization (DDPO) as well as pre-trained baselines. Furthermore, our DPO-optimized MMAudio achieves state-of-the-art performance across multiple metrics, surpassing published V2A models.</p>
-    <a href="#sectionI">I. Architecture of the proposed </a><br>
-    <a href="#sectionII">II. End-to-end Audio-visual Mulit-channel Speech Separaiton, Dereverberation and Recognition System</a><br>
+    <a href="#sectionI">I. V2A-DPO Framework</a><br>
+    <a href="#sectionII">II. MMAudio and Frieren Models</a><br>
     <a href="#sectionIII">III. Experimental Setup and Results</a><br>
-    <a href="#sectionIV">IV. Reference</a>
-    <h3> <a name="sectionI"> I. Three Audio-visual Multi-channel Speech Enhancement Front-end Architectures</a> </h3>
+    <a href="#sectionIV">IV. Demos</a><br>
+    <a href="#sectionV">V. Reference</a>
+    <h3> <a name="sectionI"> I. V2A-DPO Framework</a> </h3>
     <div style="border: none; width:60%; margin: 0 auto;">
     <img border="0" src="architectures.png" alt="architectures of speech enhancement front-end" height="10%">
     </div>
@@ -65,7 +66,7 @@
         <li> In the architecture-3, joint speech separation & dereverberation using the audio-visual mask-based WPD. </li>
         <li> The internal structural details of audio-visual mask-based MVDR, DNN-WPE, SpecM and mask-based WPD as well as the Visual Front-end modules can be seen in  Fig. 1 and Fig. 3 of the submitted paper.  </li>
     </ul>
-    <h3> <a name="sectionII">II. End-to-end Audio-visual Mulit-channel Speech Separaiton, Dereverberation and Recognition System </a> </h3>
+    <h3> <a name="sectionII">II. MMAudio and Frieren Models </a> </h3>
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="asr.png" alt="architectures of speech enhancement front-end" height="20%">
     </div>
