@@ -65,30 +65,24 @@
         <li> (b) Omni-Preference Pair Data Generation. </li>
         <li> (c) Curriculum Learning-Empowered DPO. </li>
     </ul>
-    <h3> <a name="sectionII">II. MMAudio and Frieren Models </a> </h3>
-    <p style="line-height:100%" align="justify"> <b> MMAudio:</b> </p>
+    <h3> <a name="sectionII">II. MMAudio And Frieren Models Used as The Pre-trained Flow-based V2A Models</a> </h3>
+    <p style="line-height:100%" align="justify"> <b> MMAudio [1]:</b> </p>
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="mmaudio.png" alt="architecture of mmaudio model" height="20%">
     </div>
-    <p style="line-height:100%" align="justify"> <b> Frieren:</b> </p>
+    <p style="line-height:100%" align="justify"> <b> Frieren [2]:</b> </p>
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="frieren.png" alt="architecture of frieren model" height="20%">
     </div>
-    <p style="line-height:100%" align="justify"> <b> Three fine-tuning methods are investigated When training the systems:</b> </p>
-    <ul>
-        <li> Only fine-tuning the back-end ASR component using the enhanced speech outputs while the front-end remains unchanged. </li>
-        <li> End-to-end jointly fine-tuning the entire system including the speech enhancement front-end and the recognition back-end components using the ASR cost function. </li>
-        <li> End-to-end jointly fine-tuning the entire system using a multi-task criterion interpolation between the speech enhancement and recognition cost functions. </li>
-    </ul>
     <h3> <a name="sectionIII">III. Experimental Setup and Results</a></h3>
     <div style="border: none; width:100%; margin: 0 auto;">
-    <h4> A. Experimental setup </h4>
+    <h4> Experimental setup </h4>
         <ul>
-            <li> A 15-channel symmetric linear array with non-even inter-channel spacing is leveraged to simulate the multi-channel overlapped-reverberant-noisy mixture speech using the Oxford LRS2 dataset [3] with 96997, 4272 and 4972 utterances respectively for training (91.37 hours), validation (2.59 hours) and test (2.32 hours). </li>
-            <li> 1200 (0.5 hours) utterances are recorded by replaying two loudspeakers simultaneously to generate a 15-channel overlapped-reverberant-noisy mixture speech in a meeting room [1], based on the Oxford LRS2 test set. The geometric specification of the microphone array used during recording is the same as that used in the simulation. </li>
-            <li> Espnet style Conformer AED ASR model [4] contains 12 encoder and 6 decoder layers is used in the submitted paper. </li>
+            <li> Datasets: All our experiments are performed on the constructed omni-preference pair data based on the VGGSound [3] dataset. For a fair comparison, we evaluate our models on the same test set of MMAudio [1] due to data contamination.</li>
+            <li> We conduct our experiments by using two pre-trained V2A flow-based models: MMAudio-L-44.1kHz and Frieren with the parameters of 1.03B and 159M, respectively.</li>
+            <li> We compare our optimized V2A models against five state-of-the-art models: diffusion-based Seeing&Hearing [4], FoleyCrafter [5], V2A-Mapper [6], and autoregression-based V-AURA [7], Thinksound [8]. Additionally, we compare DPO with another reinforcement learning method, namely DDPO [9], with the probability of ``Good'' predicted by AudioScore as the reward. </li>
         </ul>
-    <h4> B. Experimental results of speech enhancement front-end outputs on the simulated LRS2 mixture speech </h4>
+    <h3> <a name="sectionIII">IV. Demos</a></h3>
     <table border="1">
     	<tr>
         	<th rowspan="2" colspan="2"></th>
