@@ -80,7 +80,7 @@
         <ul>
             <li> Datasets: All our experiments are performed on the constructed omni-preference pair data based on the VGGSound [3] dataset. For a fair comparison, we evaluate our models on the same test set of MMAudio [1] due to data contamination.</li>
             <li> We conduct our experiments by using two pre-trained V2A flow-based models: MMAudio-L-44.1kHz and Frieren with the parameters of 1.03B and 159M, respectively.</li>
-            <li> We compare our optimized V2A models against five state-of-the-art models: diffusion-based Seeing&Hearing [4], FoleyCrafter [5], V2A-Mapper [6], and autoregression-based V-AURA [7], Thinksound [8]. Additionally, we compare DPO with another reinforcement learning method, namely DDPO [9], with the probability of ``Good'' predicted by AudioScore as the reward. </li>
+            <li> We compare our optimized V2A models against five state-of-the-art models: diffusion-based Seeing&Hearing [4], FoleyCrafter [5], V2A-Mapper [6], and autoregression-based V-AURA [7], Thinksound [8]. Additionally, we compare DPO with another reinforcement learning method, namely DDPO [9], with the probability of “Good” predicted by AudioScore as the reward. </li>
         </ul>
     <h4> (b) Experimental results </h4>
         <ul>
@@ -363,6 +363,64 @@
             </td>
             <td style="text-align:center">
                 <video src=vc4foleycrafter.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2"> with prompt “seagulls” </th>
+            <th colspan="1"> None </th>
+            <td style="text-align:center">
+                <video src="txt1mmaudio.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt1dpo.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt1ddpo.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt1thinksound.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt1foleycrafter.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2"> with prompt “noisy, people talking” </th>
+            <th colspan="1"> None </th>
+            <td style="text-align:center">
+                <video src="txt2mmaudio.mp4" controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt2dpo.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt2ddpo.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt2thinksound.mp4 controls="controls">
+                    your browser does not support the video tag
+                </video>
+            </td>
+            <td style="text-align:center">
+                <video src=txt2foleycrafter.mp4 controls="controls">
                     your browser does not support the video tag
                 </video>
             </td>
