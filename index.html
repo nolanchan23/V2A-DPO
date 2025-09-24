@@ -51,12 +51,12 @@
     <p style="line-height:100%" align="center"> <a href="https://github.com/nolanchan23/mmaudio-dpo" target="_blank">
                 GitHub Project Link </a></p>
     <p style="line-height:100%" align="justify"> <b>Abstract: </b>This paper introduces V2A-DPO, a novel Direct Preference Optimization (DPO) framework tailored for flow-based video-to-audio generation (V2A) models, incorporating key adaptations to effectively align generated audio with human preferences. Our approach incorporates three core innovations: (1) AudioScore—a comprehensive human preference-aligned scoring system for assessing semantic consistency, temporal alignment, and perceptual quality of synthesized audio; (2) an automated AudioScore-driven pipeline for generating large-scale preference pair data for DPO optimization; (3) a curriculum learning-empowered DPO optimization strategy specifically tailored for flow-based generative models. Experiments on benchmark VGGSound dataset demonstrate that human-preference aligned Frieren and MMAudio using V2A-DPO outperform their counterparts optimized using Denoising Diffusion Policy Optimization (DDPO) as well as pre-trained baselines. Furthermore, our DPO-optimized MMAudio achieves state-of-the-art performance across multiple metrics, surpassing published V2A models.</p>
-    <a href="#sectionI">I. V2A-DPO Framework</a><br>
+    <a href="#sectionI">I. V2A-DPO framework</a><br>
     <a href="#sectionII">II. MMAudio and Frieren Models</a><br>
-    <a href="#sectionIII">III. Experimental Setup</a><br>
+    <a href="#sectionIII">III. Experimental setup</a><br>
     <a href="#sectionIV">IV. Demos</a><br>
     <a href="#sectionV">V. Reference</a>
-    <h3> <a name="sectionI"> I. V2A-DPO Framework</a> </h3>
+    <h3> <a name="sectionI"> I. V2A-DPO framework</a> </h3>
     <div style="border: none; width:80%; margin: 0 auto;">
     <img border="0" src="architecture.png" alt="architecture of v2a-dpo" height="10%">
     </div>
@@ -65,7 +65,7 @@
         <li> (b) Omni-Preference Pair Data Generation. </li>
         <li> (c) Curriculum Learning-Empowered DPO. </li>
     </ul>
-    <h3> <a name="sectionII">II. MMAudio And Frieren Models Used as The Pre-trained Flow-based V2A Models</a> </h3>
+    <h3> <a name="sectionII">II. MMAudio and Frieren models used as the pre-trained flow-based V2A models</a> </h3>
     <p style="line-height:100%" align="justify"> <b> MMAudio [1]:</b> </p>
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="mmaudio.png" alt="architecture of mmaudio model" height="20%">
@@ -74,7 +74,7 @@
     <div style="border: none; width:70%; margin: 0 auto;">
     <img border="0" src="frieren.png" alt="architecture of frieren model" height="20%">
     </div>
-    <h3> <a name="sectionIII">III. Experimental Setup</a></h3>
+    <h3> <a name="sectionIII">III. Experimental setup</a></h3>
     <ul>
         <li> Datasets: All our experiments are performed on the constructed omni-preference pair data based on the VGGSound [3] dataset. For a fair comparison, we evaluate our models on the same test set of MMAudio [1] due to data contamination.</li>
         <li> We conduct our experiments by using two pre-trained V2A flow-based models: MMAudio-L-44.1kHz and Frieren with the parameters of 1.03B and 159M, respectively.</li>
@@ -421,7 +421,7 @@
     </div>
     <table border="1">
         <tr>
-        	<th colspan="7"> Demo shown in the manuscript with the prompt "playing ukulele"</th>
+        	<th colspan="7"> Demos shown in the manuscript with the prompt "playing ukulele"</th>
         </tr>
           <tr>
             <th>Groudtruth</th>
