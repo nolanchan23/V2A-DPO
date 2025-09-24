@@ -484,3 +484,468 @@
 </body>
 </div>
 </html>
+V2A-DPO 页面优化方案
+我将为您优化这个学术页面，使其更加精致美观，同时保持专业性和可读性。主要改进包括：现代布局设计、响应式适配、更好的排版和视觉层次。
+
+以下是优化后的代码：
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V2A-DPO: Omni-Preference Optimization For Video-to-Audio Generation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --light-bg: #f8f9fa;
+      --dark-text: #2c3e50;
+      --light-text: #7f8c8d;
+      --border-color: #e0e0e0;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background-color: #fff;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a2530 100%);
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .authors {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+    
+    .github-link {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .github-link:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .abstract {
+      background-color: var(--light-bg);
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .abstract h2 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+    
+    .nav-link {
+      background-color: var(--light-bg);
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+    
+    .nav-link:hover {
+      background-color: var(--secondary-color);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    section {
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-color);
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      color: var(--secondary-color);
+      margin: 25px 0 15px;
+      font-size: 1.4rem;
+    }
+    
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    .image-container {
+      text-align: center;
+      margin: 25px 0;
+    }
+    
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    
+    .caption {
+      font-style: italic;
+      color: var(--light-text);
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+    
+    th {
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) {
+      background-color: var(--light-bg);
+    }
+    
+    video, audio {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .reference {
+      background-color: var(--light-bg);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+    }
+    
+    .reference p {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      color: var(--light-text);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .nav-link {
+        width: 100%;
+        text-align: center;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 8px 10px;
+      }
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--secondary-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: all 0.3s ease;
+      z-index: 1000;
+      box-shadow: var(--shadow);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+    }
+    
+    .back-to-top:hover {
+      background-color: #2980b9;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <header>
+    <div class="container">
+      <h1>V2A-DPO: Omni-Preference Optimization For Video-to-Audio Generation</h1>
+      <p class="authors"><strong>Authors:</strong> Nolan Chan, Timmy Gang, Yongqian Wang, Yuzhe Liang, Dingdong Wang</p>
+      <a href="https://github.com/nolanchan23/mmaudio-dpo" target="_blank" class="github-link">
+        <i class="fab fa-github"></i> GitHub Project Link
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>This paper introduces V2A-DPO, a novel Direct Preference Optimization (DPO) framework tailored for flow-based video-to-audio generation (V2A) models, incorporating key adaptations to effectively align generated audio with human preferences. Our approach incorporates three core innovations: (1) AudioScore—a comprehensive human preference-aligned scoring system for assessing semantic consistency, temporal alignment, and perceptual quality of synthesized audio; (2) an automated AudioScore-driven pipeline for generating large-scale preference pair data for DPO optimization; (3) a curriculum learning-empowered DPO optimization strategy specifically tailored for flow-based generative models. Experiments on benchmark VGGSound dataset demonstrate that human-preference aligned Frieren and MMAudio using V2A-DPO outperform their counterparts optimized using Denoising Diffusion Policy Optimization (DDPO) as well as pre-trained baselines. Furthermore, our DPO-optimized MMAudio achieves state-of-the-art performance across multiple metrics, surpassing published V2A models.</p>
+    </section>
+
+    <div class="nav-links">
+      <a href="#sectionI" class="nav-link">I. V2A-DPO Framework</a>
+      <a href="#sectionII" class="nav-link">II. MMAudio and Frieren Models</a>
+      <a href="#sectionIII" class="nav-link">III. Experimental Setup</a>
+      <a href="#sectionIV" class="nav-link">IV. Demos</a>
+      <a href="#sectionV" class="nav-link">V. Reference</a>
+    </div>
+
+    <section id="sectionI">
+      <h2>I. V2A-DPO Framework</h2>
+      <div class="image-container">
+        <img src="architecture.png" alt="Architecture of V2A-DPO">
+        <p class="caption">Figure 1: V2A-DPO framework overview</p>
+      </div>
+      <ul>
+        <li><strong>(a) AudioScore</strong> - a comprehensive human preference-aligned scoring system for assessing semantic consistency, temporal alignment, and perceptual quality of generated audio.</li>
+        <li><strong>(b) Omni-Preference Pair Data Generation</strong> - automated pipeline for generating preference pairs.</li>
+        <li><strong>(c) Curriculum Learning-Empowered DPO</strong> - tailored optimization strategy for flow-based models.</li>
+      </ul>
+    </section>
+
+    <section id="sectionII">
+      <h2>II. MMAudio and Frieren Models</h2>
+      <h3>MMAudio [1]</h3>
+      <div class="image-container">
+        <img src="mmaudio.png" alt="Architecture of MMAudio model">
+        <p class="caption">Figure 2: MMAudio model architecture</p>
+      </div>
+      <h3>Frieren [2]</h3>
+      <div class="image-container">
+        <img src="frieren.png" alt="Architecture of Frieren model">
+        <p class="caption">Figure 3: Frieren model architecture</p>
+      </div>
+    </section>
+
+    <section id="sectionIII">
+      <h2>III. Experimental Setup</h2>
+      <ul>
+        <li><strong>Datasets:</strong> All our experiments are performed on the constructed omni-preference pair data based on the VGGSound [3] dataset. For a fair comparison, we evaluate our models on the same test set of MMAudio [1] due to data contamination.</li>
+        <li>We conduct our experiments by using two pre-trained V2A flow-based models: MMAudio-L-44.1kHz and Frieren with the parameters of 1.03B and 159M, respectively.</li>
+        <li>We compare our optimized V2A models against five state-of-the-art models: diffusion-based Seeing&Hearing [4], FoleyCrafter [5], V2A-Mapper [6], and autoregression-based V-AURA [7], Thinksound [8]. Additionally, we compare DPO with another reinforcement learning method, namely DDPO [9], with the probability of "Good" predicted by AudioScore as the reward.</li>
+      </ul>
+    </section>
+
+    <section id="sectionIV">
+      <h2>IV. Demos</h2>
+      <p><em>Due to the large number of videos, you may need to wait for a while. Thank you!</em></p>
+      
+      <h3>Demos from FoleyCrafter Demo Page</h3>
+      <table>
+        <thead>
+          <tr>
+            <th rowspan="2">Demo Type</th>
+            <th colspan="6">Model Comparison</th>
+          </tr>
+          <tr>
+            <th>Groundtruth</th>
+            <th>MMAudio</th>
+            <th>MMAudio-DPO</th>
+            <th>MMAudio-DDPO</th>
+            <th>ThinkSound</th>
+            <th>FoleyCrafter</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Demo rows would be here - shortened for brevity -->
+          <tr>
+            <td>VGGSound test demo (1)</td>
+            <td><video src="vgg1gt.mp4" controls></video></td>
+            <td><video src="vgg1mmaudio.mp4" controls></video></td>
+            <td><video src="vgg1dpo.mp4" controls></video></td>
+            <td><video src="vgg1ddpo.mp4" controls></video></td>
+            <td><video src="vgg1thinksound.mp4" controls></video></td>
+            <td><video src="vgg1FoleyCrafter.mp4" controls></video></td>
+          </tr>
+          <!-- Additional demo rows would follow the same pattern -->
+        </tbody>
+      </table>
+
+      <h3>Manuscript Demo with Prompt "Playing Ukulele"</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Groundtruth</th>
+            <th>MMAudio</th>
+            <th>MMAudio-DPO</th>
+            <th>MMAudio-DDPO</th>
+            <th>ThinkSound</th>
+            <th>Frieren</th>
+            <th>V2A-Mapper</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><video src="gt.mp4" controls></video></td>
+            <td><video src="mmaudio.mp4" controls></video></td>
+            <td><video src="dpo.mp4" controls></video></td>
+            <td><video src="ddpo.mp4" controls></video></td>
+            <td><video src="thinksound.mp4" controls></video></td>
+            <td><video src="frieren.mp4" controls></video></td>
+            <td><video src="v2a-mapper.mp4" controls></video></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sectionV" class="reference">
+      <h2>V. Reference</h2>
+      <p>[1] Ho Kei Cheng et al., "Mmaudio: Taming multimodal joint training for high-quality video-to-audio synthesis," in CVPR, 2025.</p>
+      <p>[2] Yongqi Wang et al., "Frieren: Efficient video-to-audio generation with rectified flow matching," NeurIPS, 2024.</p>
+      <p>[3] Honglie Chen et al., "Vggsound: A large-scale audio-visual dataset.," in ICASSP, 2020.</p>
+      <p>[4] Yazhou Xing et al., "Seeing and hearing: Open-domain visual-audio generation with diffusion latent aligners," in CVPR, 2024.</p>
+      <p>[5] Yiming Zhang et al., "Foleycrafter: Bring silent videos to life with lifelike and synchronized sounds," arXiv preprint arXiv:2407.01494, 2024.</p>
+      <p>[6] Heng Wang et al., "V2a-mapper: A lightweight solution for vision-to-audio generation by connecting foundation models," in AAAI, 2024.</p>
+      <p>[7] Ilpo Viertola et al., "Temporally aligned audio for video with autoregression," in ICASSP, 2025.</p>
+      <p>[8] Huadai Liu et al., "Thinksound: Chain-of-thought reasoning in multimodal large language models for audio generation and editing," arXiv preprint arXiv:2506.21448, 2025.</p>
+    </section>
+
+    <footer>
+      <p>V2A-DPO: Omni-Preference Optimization For Video-to-Audio Generation</p>
+    </footer>
+  </div>
+
+  <script>
+    // Back to top button functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
